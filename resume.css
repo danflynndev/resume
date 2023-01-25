@@ -1,0 +1,149 @@
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+section {
+    padding: 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: .95rem;
+    letter-spacing: 0.3em;
+    border-bottom: 1px solid black;
+}
+
+h3 {
+    font-size: 1.2rem;
+    letter-spacing: -0.6px;
+}
+
+h4, .months {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+li {
+    font-size: .9rem;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section + section {
+    margin-top: 1.5rem;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.main-column {
+    flex: 1 1 0%;
+    padding-bottom: 3rem;
+}
+
+.impression {
+    box-sizing: content-box;
+    width: 20%;
+    margin-right: 3rem;
+}
+
+.impression img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.period {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.overview {
+    flex-basis: 18rem;
+}
+
+.details {
+    flex: 1 1 0%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.details ul {
+    margin: 0 0;
+    padding: 0px;
+    list-style-position: inside;
+}
+
+.icon {
+    display: inline-block;
+    width: 1.33rem;
+    margin: .33rem;
+}
+
+.impression ul {
+    list-style: none;
+
+}
+.impression li {
+    white-space: nowrap;
+}
+
+.portraitSq {
+    max-width: 200px;
+}
+
+.skills {
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .impression {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .skills {
+        flex-flow: row wrap;
+    }
+    .icon {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .period {
+        flex-direction: column;
+    }
+    .overview {
+        flex-basis: 0;
+        margin-bottom: 1rem;
+    }
+    .skills {
+        flex-direction: column;
+    }
+    .impression img {
+        width: 35vw;
+    }
+}
